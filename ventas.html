@@ -1,33 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Comisiones</title>
     <link rel="stylesheet" href="ventas.css">
     <script src="ventas.js"></script>
+    <script src="utilitarios.js"></script>
 </head>
+
 <body>
 
     <div class="contenedor">
         <h1>Calculadora de Comisiones</h1>
 
-        <label>Salario Base:</label>
-        <input type="text" id="txtSueldoBase">
+        <div class="grupo">
+            <label>Salario Base:</label>
 
-        <label>Número de ventas:</label>
-        <input type="text" id="txtVentas">
+            <!-- Código original -->
+            <!-- <input type="text" id="txtSueldoBase" placeholder="Ej: 500"> -->
 
-        <label>Precio del producto:</label>
-        <input type="text" id="txtPrecio">
+            <!-- Generado con IA: se agrega validación onblur y mensaje de error -->
+            <input type="text" id="txtSueldoBase" placeholder="Ej: 500" onblur="validarNumero(this)">
+            <span id="error_txtSueldoBase" class="mensaje-error"></span>
+        </div>
+
+        <div class="grupo">
+            <label>Número de ventas:</label>
+
+            <!-- Código original -->
+            <!-- <input type="text" id="txtVentas" placeholder="Ej: 10" onblur="validarVentas()"> -->
+
+            <!-- Generado con IA: se reemplaza la validación anterior por una validación general y se agrega el mensaje de error -->
+            <input type="text" id="txtVentas" placeholder="Ej: 10" onblur="validarNumero(this)">
+            <span id="error_txtVentas" class="mensaje-error"></span>
+        </div>
+
+        <div class="grupo">
+            <label>Precio del producto:</label>
+
+            <!-- Código original -->
+            <!-- <input type="text" id="txtPrecio" placeholder="Ej: 25"> -->
+
+            <!-- Generado con IA: se agrega validación onblur y mensaje de error -->
+            <input type="text" id="txtPrecio" placeholder="Ej: 25" onblur="validarNumero(this)">
+            <span id="error_txtPrecio" class="mensaje-error"></span>
+        </div>
 
         <button onclick="calcular()">Calcular Comisión</button>
 
-        <h2>Resultados</h2>
-        <p>Salario Base: <span id="spSueldoBase"></span></p>
-        <p>Comisión: <span id="spComision"></span></p>
-        <p>Total: <span id="spTotal"></span></p>
+        <div class="resultados">
+            <h2>Resultados</h2>
+
+            <p>
+                <strong>Salario Base:</strong>
+                <span id="spSueldoBase"></span>
+            </p>
+
+            <p>
+                <strong>Comisión:</strong>
+                <span id="spComision"></span>
+            </p>
+
+            <p>
+                <strong>Total:</strong>
+                <span id="spTotal"></span>
+            </p>
+        </div>
     </div>
 
-    
 </body>
+
 </html>
