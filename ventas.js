@@ -14,15 +14,15 @@ function calcularComision(numeroVentas, precioProducto) {
 ///Validar ventas
 
 //function validarVentas() {
-    //Para validacion primero recuperamos el texto de la cada de texto
-    // let numeroVentasStr = recuperarTexto('txtVentas');
-    // if (numeroVentasStr.length >= 5) {
-    // alert('Maximo 5 caracteres');
-    // return false;
-    // } else {
-    //  return true;
-    //}
-    //}
+//Para validacion primero recuperamos el texto de la cada de texto
+// let numeroVentasStr = recuperarTexto('txtVentas');
+// if (numeroVentasStr.length >= 5) {
+// alert('Maximo 5 caracteres');
+// return false;
+// } else {
+//  return true;
+//}
+//}
 
 
 
